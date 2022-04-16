@@ -58,7 +58,7 @@ git reset --hard commitid
 remote repository:
 to add remote repository to local we use remote command
 /*
-git remote add origin remote repo url
+git remote add origin remote repo url -- it will add local to remote repository
 
 git push -u origin master --push into remote repository
 */
