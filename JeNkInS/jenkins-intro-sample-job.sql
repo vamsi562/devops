@@ -82,8 +82,18 @@ Maven for packaging code and producing artifact
 . once saved build -> Build now 
 . once job succeded we can see output in "Console Output"
 
-
-	 
-	 
+------ INSTALLING TOMCAT SERVER ON QA and PROD SERVERS -----------
+. we need to install both tomcat8 and tomcat8-ADMIN
+  "sudo apt install tomcat8 -y"
+  "sudo apt install tomcar8-admin -y"
+. once installed check using "public-ip:8080" -- public-ip of instances
+. to use tomcat we need to add USER
+  "cd /etc/tomcat8"
+  "cat tomcat_users.xml"
+  add user "<user username="training" password="sunilsunil" roles="manager-script,manager-status,manager-gui"/>"
+   ----under username provide your username and under password provide password of that USER
+. After adding user restart service
+  "sudo service tomcat8 restart"
+. repeat the same process for prod server as well
     
   
